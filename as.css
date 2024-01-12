@@ -1,0 +1,29 @@
+img{
+   padding:20px;
+    
+    border-radius: 50%;
+}
+.main{
+    padding: 10px  ;
+    border: 1px solid lightgrey;
+    margin : 150px auto ;
+    width: 400px;
+    border-radius: 10px;
+    font-family: "Google Sans Text", "Google Sans", Roboto, Arial, sans-serif;
+    height: 325px;
+    font-weight: lighter;
+}
+a{
+    text-decoration: none;
+    padding-bottom: 15px;
+    margin: 8px;
+   font-family: "Google Sans Text", "Google Sans", Roboto, Arial, sans-serif;
+   font-weight: bold;
+   color: rgb(0, 87, 250);
+}
+p{
+    padding: 10px 35px 10px 10px;
+    font-size: 15px;
+    color: rgb(156, 151, 151);
+    font-weight: lighter;
+}
