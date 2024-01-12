@@ -1,139 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-<head >
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="rs.css">
-</head >
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var fadeElements = document.querySelectorAll('.fade-in');
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        function handleScroll() {
-            fadeElements.forEach(function (element) {
-                var elementPosition = element.getBoundingClientRect().top;
-                var windowHeight = window.innerHeight;
+body {
+    font-family: Copperplate, Papyrus, fantasy; background-size: cover; background-repeat: no-repeat; background-image: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9naW58ZW58MHx8MHx8fDA%3D&w=1000&q=80) ; padding: 150px 100px; 
+}
 
-                if (elementPosition < windowHeight * 0.75) {
-                    element.classList.add('visible');
-                } else {
-                    element.classList.remove('visible');
-                }
-            });
-        }
+/* Header/Blog Title */
+.header {
+  padding-bottom: 200px;
+  text-align: center;
+  background: white;
+}
 
-        // Listen for scroll events
-        window.addEventListener('scroll', handleScroll);
+.header h1 {
+  font-size: 50px;
+}
 
-        // Initial check in case elements are already in view on page load
-        handleScroll();
-    });
-</script>
-<body class="container">
-<div>
-    
-    <div class="co fade-in"> <h1>RESUME</h1> 
-<address>
-    Harsha vamsi Nukireddy, <br>
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  
+  padding-left: 20px;
+}
+
+.fakeimg2 {
+  background-image:url(https://jobscruze.com/asset/upload/blog_images/27022020120250.jpg);
+  width: 100%;
+  padding: 20px;
+}
+/* Fake image */
+.fakeimg1 {
+  background-image:url(https://jobscruze.com/asset/upload/blog_images/27022020120250.jpg);
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Resume</h1>
+  <p style="float: left; padding-left: 20px;">Harsha vamsi Nukireddy, <br>
     S/o Sada Siva Rao,<br>
     37-1-31,<br>
     Innespeta,<br>
     Rajahmundry,<br>
-    East godavari,<br>
-    533101.	        <br>
-</address>
-<p style="text-align: right;">Email : harshavamsi2018@gmail.com<br>Contact No: 9966194435</p></div>
-<div class="head fade-in"><hr><h3>CARRIER OBJECTIVE:</h3><hr></div>
-<div class="co fade-in"><br>
-<p style="text-align: justify;">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aim to work for a progressive organization in a growth oriented position that gives enough scope to shape my skills according to the latest demand at the same time to work towards organization for a job that would provide me a strong for my career.
-       </p></div>
-<div class="head fade-in"><hr><h3>EDUCATIONAL QUALIFICATIONS:</h3><hr></div>
-<div class="co fade-in"><br>
-<table>
-    <tr>
-        <th>Qualification</th>
-        <th>School/University</th>
-        <th>Pass of year</th>
-        <th>GPA/percentage</th>
-    </tr>
-    <tr>
-        <td>S.S.C</td>
-        <td>Thejus Residential e.m High school</td>
-        <td>June,2018</td>
-        <td>93%</td>
-    </tr>
-    <tr>
-        <td>Diploma Mechanical </td>
-        <td>Giet polytechnic IInd shift college </td>
-        <td>June,2021</td>
-        <td>69.9%</td>
-    </tr>
-    <tr>
-        <td>Computer Science Engineering </td>
-        <td>Vsm college of engineering </td>
-        <td>Persuing…</td>
-        <td>Persuing…</td>
-    </tr>
-</table>
-<br></div>
-<div class="head fade-in"><hr><h3>COMPUTER SKILLS :</h3><hr></div>
-<div class="co fade-in"><br>
+    East godavari,
+    533101.	
+    </p>
+    <p style="float: right; right:0; bottom: 0;padding-right: 20px;">Harsha vamsi Nukireddy,<br> 
+        Email : <a href="mailto:harshavamsi2018@gmail.com">harshavamsi2018@gmail.com</a><br>
+        Contact No: 9966194435<br>
 
-    <ol>❖&nbsp;&nbsp; <a href="https://drive.google.com/file/d/1IdAKie5XhL8lS6wG-JYIB0p-4jmf01wY/view?usp=drivesdk" target="_blank"> C Basic Programming</a> </ol> 
-    <ol>❖&nbsp;&nbsp; <a href="https://drive.google.com/file/d/1IaPeNnqn1oZWX_gZdvckL0R2UKGvtVoX/view?usp=drivesdk" target="_blank">Java SE Core</a> </ol>
-    <ol>❖&nbsp;&nbsp; <a href="#"> Html5</a></ol>
-    <ol>❖&nbsp;&nbsp; <a href="#"> CSS</a></ol>
-    <ol>❖&nbsp;&nbsp; <a href="#"> JavaScript</a></ol>
-    <br><p Style="text-align: right; text-decoration: underline;">Click on Skills</p> </div>
-    <div class="head fade-in"><hr><h3> STRENGTH:</h3><hr></div>
-    <div class="co fade-in"><br>
-<ol>❖&nbsp;&nbsp;  Good Communication Skills </ol> 
-    <ol>❖&nbsp;&nbsp; Positive Thinking</ol>
-    <ol>❖&nbsp;&nbsp; Self Confidence</ol>
-    <br></div>
-    <div class="head fade-in"><hr><h3> PERSONAL SKILLS:</h3><hr></div>
-    <div class="co fade-in"><br>
-<ol>❖&nbsp;&nbsp;Work dedicated & Honest </ol> 
-    <ol>❖&nbsp;&nbsp;Possitive Attitude & Perfect planning</ol>
-    
-    <br></div>
-    <div class="head fade-in"><hr><h3>PERSONAL PROFILE:</h3><hr></div>
-    <div class="co fade-in">
-    <br>
-    <!-- <table>
-        <tr>
-            <td>Name</td>
-            <td>:</td>
-            <td>Nukireddy Harsha Vamsi</td>
-        </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-    </table> -->
-        <ol>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  :&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  Nukireddy Harsha Vamsi </ol>
-        <ol>Date of Birth	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  :&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 11/10/2003 </ol>
-        <ol>Languages Known  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  :&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Telugu, English  </ol>
-        <ol>Gender  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  :&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  Male </ol>
-        <ol>Material Status &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  :&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Single  </ol>
-        <ol>Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  :&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  Indian  </ol>
-        <br></div>
-        <div class="head fade-in"><hr><h3>DECLARATION:</h3><hr></div>
-        <div class="co fade-in">
-    <br>
-    <p style="text-align: justify;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I hereby state that all the above furnished information is true and correct to the best of my knowledge and belief.</p>
-        <br><p>PLACE &nbsp;:&nbsp;Rajahmundry<br>
-    DATE &nbsp;:&nbsp;</p>
-    <p style="text-align: right;">(Nukireddy Harsha Vamsi)</p></div>
-    
+        </p>
+</div>
 
-    <br>
-    <footer>Copyright 1999-2024 by harsha__naidu_7. All Rights Reserved.
-    </footer>
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>CARRIER OBJECTIVE</h2>
+      <div class="fakeimg1" style="height:300px;"></div><br>
+      <p></p>
+      <p>  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;   Aim to work for a progressive organization in a growth oriented position that gives enough scope to shape my skills according to the latest demand at the same time to work towards organization for a job that would provide me a strong for my career.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 
 </body>
 </html>
+
+
