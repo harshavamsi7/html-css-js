@@ -1,0 +1,285 @@
+
+ .html
+ {
+   width: 50%;
+   float: left;
+ }
+.html-bar{
+   width: 350px;
+   height: 10px;
+   border-radius: 10px;
+   background-color: #f0f0f0;
+   overflow: hidden;
+}
+.html-bar-fill{
+   width: 85%;
+   background-color: #007bff;
+   height: 100%;
+}
+
+   h1{
+       padding: 0px 8px;
+   }
+  .he  ul{
+       list-style-type: none;
+      
+       align-content: inline;
+      
+   }
+   .he ul li{
+       display: inline;
+       float: left;
+   }
+   a{
+       display: block;
+       padding: 9.75px;
+       text-decoration: none;
+       margin: 21.5px 0px;
+       }
+       main{
+           padding-top: 75px;
+           padding-left: 30px;
+           font-size: larger;
+       }
+       f{
+           font-size: large;
+       }
+       .headof{
+           display: flex;
+           justify-content:center ;
+           padding-bottom: 50px;
+       }
+       .co1{
+           width: 50%;
+           float: left;
+           
+           margin: px;
+           padding-top: 50px;
+           padding-left: 60px;
+           
+       }
+       .co2{
+           width: 50%;
+           float: right;
+           font-size: larger;    
+       }
+       .co3{
+           width: 50%;
+           float: left;
+           font-size: larger;
+           
+           padding-left: 50px;
+          
+           }
+           .co4{
+           width: 50%;
+           float: right;
+         
+          
+           
+       }
+       
+       .co5{
+           width: 50%;
+           position: relative;
+           
+           margin: px;
+           padding-top: 50px;
+           display: ;
+           }
+
+           .co6{
+           width: 40%;
+           float: right;
+           font-size: larger;
+           margin: px;
+           padding-top: 50px;
+           
+           
+       }
+       .projects{
+           display: flex;
+           justify-content: center;
+           padding-left: 70px;
+       }
+      
+       .co7,.co8,.co9{
+           width: 33.3%;
+           }
+      .co10{
+            width: 50%;
+            float: right;
+            font-size: larger;    
+        }
+
+      .co2 img{
+           width:400px ;
+           
+           padding-left: 200px;
+           padding-top: 50px;
+       }
+       .co3 img{
+        width:400px ;
+        
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+   .social-links a{
+       margin: 0px 10 px;
+   }
+   .social-links a:hover{
+       opacity: 0.5;
+       color: none;
+   }
+   .social-links{
+       display: flex;
+       justify-content: center;
+       margin-bottom: ;
+       float: left;
+
+   }
+       .fab{
+           font-size: xx-large;
+           padding-left: 10px;
+           padding-right: 10px;
+       }
+       .fab fa-github{
+           color: black;
+       }
+       p{
+           width: 75%;
+           padding-left: 10px;
+           line-height: 1.8;
+       }
+       .c{
+           float: left;
+           width: 50%;
+       }
+       .c-bar {
+           width:350px ;
+           height: 10px;
+           background-color: #f0f0f0;
+           border-radius: 10px;
+           overflow: hidden;
+           }
+
+       .c-bar-fill {
+                   height: 100%;
+                   background-color: #007bff;
+                   width: 75%; /* Set the desired percentage here */
+                   }
+                   
+       .java{
+           float: right;
+           width: 50%;
+       }
+       .java-bar {
+           width: 350px;
+           height: 10px;
+           background-color: #f0f0f0;
+           border-radius: 10px;
+           overflow: hidden;
+           float: ;
+           }
+
+       .java-bar-fill {
+                   height: 100%;
+                   background-color: #007bff;
+                   width: 70%; /* Set the desired percentage here */
+                   }
+       .css{
+           float: left;
+           width: 50%;
+       }
+       .css-bar {
+           width:350px ;
+           height: 10px;
+           background-color: #f0f0f0;
+           border-radius: 10px;
+           overflow: hidden;
+           }
+
+       .css-bar-fill {
+                   height: 100%;
+                   background-color: #007bff;
+                   width: 60%; /* Set the desired percentage here */
+                   }
+       .js{
+           float: left;
+           width: 50%;
+           padding-bottom: 50px;
+           
+       }
+       .js-bar {
+           width:350px ;
+           height: 10px;
+           background-color: #f0f0f0;
+           border-radius: 10px;
+           overflow: hidden;
+           }
+
+       .js-bar-fill {
+                   height: 100%;
+                   background-color: #007bff;
+                   width: 60%; /* Set the desired percentage here */
+                   }
+       .react{
+           float: right;
+           width: 50%;
+           padding-bottom: 50px;
+       }
+       .react-bar {
+           width:350px ;
+           height: 10px;
+           background-color: #f0f0f0;
+           border-radius: 10px;
+           overflow: hidden;
+           }
+
+       .react-bar-fill {
+                   height: 100%;
+                   background-color: #007bff;
+                   width: 60%; /* Set the desired percentage here */
+                   }
+       .about{
+           display: flex;
+           justify-content: center;
+       }
+       .skills{
+           display: flex;
+           justify-content: center;
+       }  
+       .contact{
+        float: left;
+        display: flex;
+           justify-content: center;
+       }  
+       .contact a{
+        padding:10px 20px 10px 20px;
+        margin-left: 10px;
+        background-color:#007bff;
+        color: aliceblue;
+        border-radius: 5px;
+       }
+       .footer p{
+        display: inline;
+       }  
+       .footer a{
+        display: inline;
+       }
+       .footer{
+        align-items: center;
+        justify-content: center;
+        font-size:smaller ;
+        text-align: center;
+       }
+       footer nav ul{
+        list-style: none;
+       }
+       footer nav ul li{
+        display: inline-block;
+        margin:0 20px 20px 20px;
+       }
+       footer nav ul li a{
+        text-decoration: none;
+       }
