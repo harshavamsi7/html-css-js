@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form{
+        margin: 70px auto;
+        box-shadow: 2px 2px 2px 2px black;
+        width: 300px;
+        border-radius: 5px;
+        padding: 10px 50px 40px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .form h1{
+        text-align: center;
+        margin: 30px 0;
+        font-size: x-large;
+    }
+    input{
+        margin: 0 10px;
+        width: auto;
+    }
+    s{
+        color: red;
+        text-decoration: none;
+    }
+    .error{
+        color: red;
+    }
+    fieldset{
+        border: none;
+    }
+    .firstname,.lastname,.password,.email,.confirm-password{
+       display: flex;
+       align-items: center;
+       justify-content: center;  
+    }
+    input{
+        width: 235px;
+        height: 30px;
+        font-size: 15px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .but{
+        text-align: center; 
+    }
+    .but button{
+        padding: 10px 85px;
+        margin-top: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+    }
+</style>
+<body>
+    <div class="form">
+        <h1>Registration Form</h1>
+    <div class="firstname">
+        <fieldset>
+        <legend ">Firstname<s>*</s> :</legend>
+        <input type="text" id="firstname">
+        <p class="error"></p>
+    </fieldset>
+    </div>
+    <div class="lastname">
+    <fieldset>
+        <legend >Lastname<s>*</s> :</legend>
+        <input type="text" id="lastname">
+        <p class="error"></p>
+    </fieldset>
+    </div>
+    <div class="email">
+    <fieldset>
+        <legend >Email<s>*</s> :</legend>
+        <input type="email" id="email">
+        <p class="error"></p>
+    </fieldset>
+    </div>
+    <div class="password">
+    <fieldset>
+        <legend >Password<s>*</s> :</legend>
+        <input type="password" id="password" minlength="8" required>
+        <p class="error"></p>
+    </fieldset>
+    </div>
+    <div class="confirm-password">
+    <fieldset>
+        <legend >Confirm Password<s>*</s> :</legend>
+        <input type="password" id="confirm-password">
+        <p class="error"></p>
+    </fieldset>
+    </div>
+    <div class="but">
+        <button  id="submit">Submit</button>
+    </div>
+    </div>
+    <script>
+        submit.addEventListener('click',(e)=>{
+            e.preventDefault();
+            valid();
+        })
+        function setError(element,message){
+            
+            const parent=element.parentElement;
+            const error=parent.querySelector('.error')
+            error.innerHTML=message;
+        }
+        const setSuccess=(element)=>{
+            const parent=element.parentElement;
+            const error=parent.querySelector('.error');
+            error.innerHTML="✔";
+            error.style.color="green"
+        }
+        function validUp(pass){
+            const upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            for(var i=0;i<upper.length;i++){
+            if(upper.includes(pass[i])){
+                console.log('uppass');
+                return true;
+            }
+        }
+        console.log('upfail');            
+            return false;
+    }
+        function validLo(pass){
+            const lower="abcdefghijklmnopqrstuvwxyz";
+            for(var i=0;i<lower.length;i++){
+            if(lower.includes(pass[i])){
+                console.log('lowpass');
+                return true;
+            }
+        }
+        console.log('lowfail');
+        return false;
+    }
+        function validNum(pass){
+            const number="0123456789"
+            for(var i=0;i<number.length;i++){
+            if(number.includes(pass[i])){
+                console.log('numpass');
+                return true;
+            }
+        }
+        console.log('numfail');
+        return false;
+    }
+        function validSym(pass){
+            const symbols="~`!@#$%^&*()_+{[]}|\:;'<,>.?/"
+            for(var i=0;i<symbols.length;i++){
+            if(symbols.includes(pass[i])){
+                console.log('sympass');
+                return true;
+            }
+        }
+        console.log('symfail');
+            return false;
+    }
+    function validAt(email){
+        for(var i=0;i<email.length;i++){
+            if(email[i]=="@"){
+                return true;
+            }
+        }
+        return false;
+    }
+        function valid(){
+            const firstname=document.getElementById('firstname');
+            const lastname=document.getElementById('lastname');
+            const password=document.getElementById('password');
+            const confirm=document.getElementById('confirm-password');
+            const email=document.getElementById('email');
+            if(firstname.value==""){
+                setError(firstname,"Please Enter Your Firstname")
+            }else{
+                setSuccess(firstname);
+            }
+
+            if(lastname.value==""){
+                setError(lastname,"Please Enter Your Lastname")
+            }else{
+                setSuccess(lastname);
+            }
+
+            if(email.value==""){
+                setError(email,"Please Enter Your Email Address")
+            }
+            else if(validAt(email.value)){
+                setSuccess(email);
+            }
+            else{
+                setError(email,'Incorrect Email Address')
+            }
+
+            if(password.value==""){
+                setError(password,"Please Enter Your password");
+            }
+            else if(password.length<8){
+                setError(password,"Enter minimum 8 characters")
+            }
+            else if(validUp(password.value)&&validLo(password.value)&&validNum(password.value)&&validSym(password.value)){
+                setSuccess(password);
+            }
+            else{
+                setError(password,"Enter atleast one Upper,one Lower,one Number,one Symbol")
+            }
+            if(confirm.value==""){
+                setError(confirm,"Please Re-enter Your Password");
+            }
+            else if(confirm.value==password.value){
+                setSuccess(confirm);
+            }
+            else{
+                setError(confirm,"Enter Valid Password")
+            }
+        }
+    </script>
+</body>
+</html>

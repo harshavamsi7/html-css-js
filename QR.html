@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .qr{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        justify-content: center;
+        margin: 100px auto;
+    }
+    #inp{
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    img{
+        width: 200px;
+    }
+    button{
+        width: 100px;
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+    .but{
+        display: inline;
+        margin-top: 30px;
+    }
+</style>
+<body>
+    <div class="qr">
+        <h1>QR CODE<br>GENERATOR</h1>
+        <input type="text" id="inp">
+        <img src="qr-img-2.png" alt="" id="im">
+        <div class="but">
+        <button onclick="qr()">Generate</button>
+        <button onclick="down()">Download</button>
+    </div>
+    </div>
+    <script>
+        function qr(){
+            var inp=document.getElementById("inp").value;
+            if(inp==""){
+                alert("enter data")
+            }else{
+           im.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+inp;
+            } 
+        }
+        function down(){
+            var inp=document.getElementById("inp").value;
+            var a=document.createElement('a');
+            a.href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+inp;
+            a.download=inp+".jpg"
+        }
+    </script>
+</body>
+</html>

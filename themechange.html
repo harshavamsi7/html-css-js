@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #box{
+        margin: 250px auto;
+        width: 300px;
+        height: 200px;
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: center;
+        transition: 0.3s;
+    }
+    i{
+        transition: 0.3s;
+    }
+    h1{
+        margin: 40px 10px;
+    }
+</style>
+<body id="main">
+    <div class="main" >
+        <div id="box">
+            <h1>Theme Changing</h1>
+            <i class="fa-solid fa-moon" style="font-size: 35px;" id="sun"></i>
+        </div>
+    </div>
+    <script>
+        sun.addEventListener('click',()=>{
+            if(sun.classList=="fa-solid fa-sun"){
+                document.getElementById("main").style.backgroundColor="white";
+                document.getElementById("main").style.color="black";
+                document.getElementById("box").style.backgroundColor="black";
+                document.getElementById("box").style.color="white"
+                sun.classList='fa-solid fa-moon'
+            }else{
+                document.getElementById("main").style.backgroundColor="black";
+                document.getElementById("main").style.color="white";
+                document.getElementById("box").style.backgroundColor="white";
+                document.getElementById("box").style.color="black";
+                sun.classList='fa-solid fa-sun'
+            }
+        })
+    </script>
+</body>
+</html>

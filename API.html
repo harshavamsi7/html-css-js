@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    #root{
+        display: grid; 
+        grid-template-columns: auto auto auto; 
+        align-items: center; 
+        justify-content: space-evenly; 
+        text-align: center; 
+        text-align: justify;
+        background-color: black;
+        color: white;
+    }
+    .root{ 
+ box-shadow: 1px 1px 1px 1px red;
+width: 250px;
+height: 250px;
+border: 2px solid grey;
+padding: 15px;
+margin: 15px;
+border-radius: 5px;
+    }
+</style>
+<body>
+    <div id="root">
+
+    </div>
+    
+       <!-- <table border="2" cellspacing="0" cellpadding="5" >
+        <tr><th>id</th><th>tittle</th><th>thumbnail</th></tr>
+        <tbody id="root">
+
+        </tbody>
+       </table> 
+     -->
+    <script >
+        fetch("https://jsonplaceholder.typicode.com/posts")
+.then(res=>res.json())
+.then(a=>{
+    const filterdata=a.filter(item=>item.userId=10)
+root.innerHTML=filterdata.map((e)=>{
+    return (
+        `
+    <div class="root">
+        <h1>id: ${e.id}</h1>
+        <h2>UserId : ${e.userId}</h2>
+        <h2>Title : ${e.title}</h2>
+        <h4>Body : ${e.body}</h3>
+        </div>
+        `
+    )
+
+}).join("")
+})
+    </script>
+</body>
+</html>

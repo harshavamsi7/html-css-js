@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .caluc{
+        width: 300px;
+        margin: 100px auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px rgb(180, 180, 173);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: grey;
+    }
+    #inp{
+        width: 230px;
+        height: 100px;
+        margin-top: 20px;
+        font-size: 30px;
+        background-color: gainsboro;
+        border-radius: 10px;
+        text-align: right;
+    }
+    .row button{
+        width: 50px;
+        margin: 10px 20px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px 1px black;
+        border-radius: 5px;
+        background-color: gainsboro;
+        font-style: oblique;
+        font-weight: bold;
+    }
+    .rowf button{
+        width: 50px;
+        margin: 0px 20px 10px 20px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px 1px black;
+        border-radius: 5px;
+        background-color: gainsboro;
+        font-style: oblique;
+        font-weight: bold;
+    }
+    .rowl button{
+        width: 50px;
+        margin: 10px 20px 20px 20px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px 1px black;
+        border-radius: 5px;
+        background-color: gainsboro;
+        font-style: oblique;
+        font-weight: bold;
+    }
+    .caluc h3{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        padding-left: 35px;
+    }
+</style>
+<body>
+    <div class="caluc">
+    <input type="text" name="" id="inp">
+    <h3>CASIO</h3>
+    <div class="rowf">    
+    <button onclick="div()">/</button>
+    <button onclick="c()">C</button>
+    <button onclick="bs()">BS</button>
+    </div>
+    <div class="row">
+        <button  onclick="plus()">+</button>
+        <button  onclick="minus()">-</button>
+        <button onclick="mul()">*</button>
+    </div>
+    <div class="row">
+        <button onclick="seven()">7</button>
+        <button onclick="eight()">8</button>
+        <button onclick="nine()">9</button>
+    </div>
+    <div class="row">
+        <button onclick="four()">4</button>
+        <button onclick="five()">5</button>
+        <button onclick="six()">6</button>
+    </div>
+    <div class="row">
+        <button  onclick="one()">1</button>
+        <button  onclick="two()">2</button>
+        <button  onclick="three()">3</button>
+    </div>
+    <div class="rowl">
+        <button onclick="dot()">.</button>
+        <button  onclick="zero()">0</button>
+        <button onclick="cal()">=</button>
+        
+    </div>
+    </div>
+    <script>
+        function cal(){
+            var inp=document.getElementById('inp').value;
+        if(inp==""){
+            alert("Please enter a number");
+        } else{
+            try{
+            document.getElementById("inp").value=eval(inp);
+        }
+        catch(e){
+            document.getElementById("inp").value="Error";
+        }
+    }
+        }
+        function one(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="1";
+        }
+        function two(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="2";
+        }
+        function three(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="3";
+        }
+        function four(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="4";
+        }
+        function five(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="5";
+        }
+        function six(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="6";
+        }
+        function seven(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="7";
+        }
+        function eight(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="8";
+        }
+        function nine(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="9";
+        }
+        function zero(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="0";
+        }
+        function plus(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="+";
+        }
+        function minus(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="-";
+        }
+        function div(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="/";
+        }
+        function mul(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+="*";
+        }
+        function bs(){
+            var inp=document.getElementById('inp').value;
+            var len=inp.length;
+            document.getElementById('inp').value=inp.substring(0,len-1);
+        }
+        function c(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value="";
+        }
+        function dot(){
+            var inp=document.getElementById('inp').value;
+            document.getElementById('inp').value+=".";
+        }
+    
+    </script>
+</body>
+</html>

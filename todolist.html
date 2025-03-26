@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <input type="text" id="input">
+    <button onclick="todo()">add</button>
+    <ul id="list">
+
+    </ul>
+    <script>
+        function todo() {
+            var input = document.getElementById("input").value;
+            if(input==""){
+                alert("enter the data")
+            }
+            else{
+                var li = document.createElement('li');
+                li.innerHTML=input
+                document.getElementById('list').appendChild(li)
+                document.getElementById('input').value=""
+                var br=document.createElement('br')
+                li.appendChild(br)
+                var ed=document.createElement('button')
+                ed.innerHTML="Edit"
+                li.appendChild(ed)
+                ed.addEventListener('click',()=>{
+                    li.remove()
+                    document.getElementById('input').value=li.firstChild.nodeValue;
+                })
+                var de=document.createElement('button')
+                de.innerHTML="Delete"
+                li.appendChild(de)
+                de.addEventListener('click',()=>{
+                    li.remove()
+                    })
+                    var co=document.createElement('button')
+                co.innerHTML="Completed"
+                li.appendChild(co)
+                var hr=document.createElement('hr')
+                    
+                co.addEventListener('click',()=>{
+                    li.innerHTML=li.firstChild.nodeValue+'✅'
+                    li.appendChild(hr)
+                    })
+                    var hr=document.createElement('hr')
+                    li.appendChild(hr)
+            }
+        }
+    </script>
+</body>
+</html>
